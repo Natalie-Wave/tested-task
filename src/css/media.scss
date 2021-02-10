@@ -1,0 +1,206 @@
+@import "mixins.scss";
+@import "variable.scss";
+
+@media (min-width: 320px) and (max-width: 799px) {
+    .inner-container {
+        padding: 0 10px;
+    }
+
+    .header {
+        .header-container {
+            flex-direction: row-reverse;
+            .header-logo {
+                max-width: 206px;
+            }
+            .header-help {
+                display: none;
+            }
+        }
+    }
+
+    .menu-container {
+        .menu.menu-mob {
+            display: none;
+            position: absolute;
+            top: 54px;
+            right: -304px;
+            padding: 20px;
+            width: 268px;
+            background-color: rgba(255, 255, 255, 0.95);
+            z-index: 14;
+            .menu-wrapper {
+                height: 100%;
+                .menu-heading {
+                    margin-bottom: 18px;
+                    font-weight: 600;
+                    line-height: 24px;
+                    text-transform: uppercase;
+                }
+                .menu__item {
+                    margin-bottom: 22px;
+                    .menu__item-link {
+                        @include menu_links();
+                    }
+                }
+                .item-with-margin {
+                    margin-bottom: 41px;
+                }
+            }
+        }
+    }
+    
+    .search {
+        background-size: cover;
+        .search-container {
+            padding-top: 40px;
+            padding-bottom: 40px;
+            .search-heading {
+                @include mob_heading();
+            }
+            .search-wrapper {
+                .search-input {
+                    @include mob_input();
+                    background-image: url('../img/search-icon.svg');
+                    background-position: 95% center;
+                    background-repeat: no-repeat;
+                    transition: background-image .3s ease;
+                    &:hover {
+                        background-image: url('../img/search-icon-hover.svg');
+                    }
+                }
+                .search-btn {
+                    display: none;
+                }
+            }
+            .search-notification {
+                font-size: $h6size;
+                line-height: 16px;
+            }
+        }
+    }
+    .navigation {
+        .inner-container {
+            .navigation-heading {
+                display: none;
+            }
+            .navigation-mob-heading {
+                display: block;
+                margin-bottom: 16px;
+                font-weight: 500;
+                @include mob_heading();
+            }
+            .navigation-block {
+                display: none;
+            }
+        }
+    }
+    .services-pay {
+        padding: 5px 0;
+        //border-bottom: none;
+        .services-pay-container {
+            .services-pay-wrapper {
+                position: relative;
+                flex-basis: 100%;
+                padding-right: 0;
+                .services-pay-heading {
+                    margin-bottom: 0;
+                    padding: 15px 0 15px 60px;
+                    font-size: 16px;
+                    color: $dark_blue;
+                    @include menu_links();
+                    background-position: left center;
+                    background-repeat: no-repeat;
+                    cursor: pointer;
+                }
+                .triangle-down {
+                    &::after {
+                        content: ''; 
+                        position: absolute;
+                        right: 0px;
+                        top: 24px;
+                        border: 7px solid transparent;
+                        border-top: 7px solid $dark_blue;
+                    }
+                    &:hover {
+                        &::after {
+                            border-top: 7px solid $light_blue;
+                        }
+                    }
+                }
+                .triangle-up {
+                    &::after {
+                        content: ''; 
+                        position: absolute;
+                        right: 0px;
+                        top: 16px;
+                        border: 7px solid transparent;
+                        border-bottom: 7px solid $dark_blue;
+                    }
+                    &:hover {
+                        &::after {
+                            border-bottom: 7px solid $light_blue;
+                        }
+                    }
+                }
+                .fines-heading {
+                    background-image: url('../img/fines-icon.svg');
+                    transition: background-image .3s ease;
+                    &:hover {
+                        background-image: url('../img/fines-icon-hover.svg');
+                    }
+                }
+                .arrears-heading {
+                    background-image: url('../img/arrears-icon.svg');
+                    transition: background-image .3s ease;
+                    &:hover {
+                        background-image: url('../img/arrears-icon-hover.svg');
+                    }
+                }
+                .taxes-heading {
+                    background-image: url('../img/taxes-icon.svg');
+                    transition: background-image .3s ease;
+                    &:hover {
+                        background-image: url('../img/taxes-icon-hover.svg');
+                    }
+                }
+                .registry-heading {
+                    background-image: url('../img/registry-icon.svg');
+                    transition: background-image .3s ease;
+                    &:hover {
+                        background-image: url('../img/registry-icon-hover.svg');
+                    }
+                }
+                .services-pay-dopwrapper {
+                    display: none;
+                }
+            }
+            img {
+                display: none;
+            }
+        }
+        .contrary-container {
+            .contrary-wrapper {
+                padding-left: 0;
+            }
+        }
+    }
+    .partners {
+        .inner-container {
+            .partners-heading {
+                @include mob_heading();
+            }
+            .partners__list {
+                .partners__list-item {
+                    flex-basis: calc(100% / 2);
+                }
+            }
+        }
+    }
+}
+
+.modal {
+    width: 100%;
+    height: 100%;
+}
+
+

@@ -1,0 +1,82 @@
+@mixin heading {
+    font-size: $h2size;
+    font-weight: 500;
+    line-height: 48px;
+}
+
+@mixin mob_heading {
+    font-size: $h4size;
+    line-height: 26px;
+    text-align: center;
+}
+
+@mixin descr {
+    font-size: 30px;
+    font-weight: 500;
+}
+
+@mixin subheading {
+    font-size: 25px;
+    font-weight: 500;
+}
+
+@mixin links {
+    color: $dark_blue;
+    border-bottom: 1px dashed $light_blue;
+    transition: color .3s ease;
+    &:hover {
+        color: $light_blue;
+    }
+}
+
+@mixin menu_links {
+    line-height: 22px;
+    color: $dark-blue;
+    text-decoration: underline;
+    transition: color .3s ease;
+    &:hover {
+        color: $light_blue;
+    }
+}
+
+@mixin input {
+    margin-right: 17.5px;
+    padding: 19px 24px;
+    width: 100%;
+    border: 2px solid #00468533;
+    border-radius: 8px;
+    &::placeholder {
+        color: #00000075;
+    }
+    &:focus::placeholder {
+        color: #00000033;
+    }
+}
+
+@mixin mob_input {
+    margin-right: 0;
+    padding: 13px 12px;
+    width: 100%;
+    border: 2px solid #00468533;
+    border-radius: 4px;
+    &::placeholder {
+        color: #00000075;
+    }
+    &:focus::placeholder {
+        color: #00000033;
+    }
+}
+
+@mixin btn {
+    padding: 14px 32px;
+    font-size: $h3size;
+    font-weight: 500;
+    color: $bg_and_text;
+    background-color: $dark_red;
+    border: none;
+    border-radius: 8px;
+    transition: color .3s ease;
+    &:hover {
+        background-color: #E1133F;
+    }
+}

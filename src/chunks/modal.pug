@@ -1,0 +1,11 @@
+.modal
+    .modal-exit
+    h3.modal-heading Введите логин и пароль для входа в Личный кабинет
+    form.modal__form(method="POST")
+        input.modal__form-input(name="email" type="email" placeholder="Логин")
+        input.modal__form-input(name="password" type="password" placeholder="Пароль")
+        button.modal-btn Войти
+    p.modal-wrapper
+        a.modal-link(href="#") Напомнить пароль
+        a.modal-link(href="#") Регистрация
+.modal-overlay

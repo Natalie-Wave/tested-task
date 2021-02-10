@@ -1,0 +1,2 @@
+-- Установка: yarn install
+-- Запуск: yarn build
